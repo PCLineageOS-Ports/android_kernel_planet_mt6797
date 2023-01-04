@@ -8,17 +8,13 @@ pipeline {
     stages {
         stage('Download kernel') {
             steps {
-                    sh '''
-                        bash /opt/common/scripts/1_fetch_kernel.sh lineage-17.1
-                    '''
+                    sh 'bash /opt/common/scripts/1_fetch_kernel.sh lineage-17.1'
                 }
         }
 
         stage('Build kernel') {
             steps {
-                    sh '''
-                        bash /opt/common/scripts/2_build_kernel.sh 
-                    '''
+                    sh 'bash /opt/common/scripts/2_build_kernel.sh'
                 }
         }
 
